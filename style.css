@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+nav a:first-child {
+    margin-left: 0;
+}
+
+nav a:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.course-info {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #667eea;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-subtitle {
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.course-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.course-dates p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.course-dates strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.course-link:hover {
+    background: #5568d3;
+    transform: translateX(2px);
+}
+
+.course-link:active {
+    transform: translateX(0);
+}
+
+.platforms-intro {
+    text-align: center;
+    margin: 30px 0 25px 0;
+    color: white;
+}
+
+.platforms-intro h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.95;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.prompt-anatomy {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.prompt-anatomy h2 {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.prompt-intro {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.crtf-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.crtf-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    background: #f8fafc;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.crtf-card h3 {
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.crtf-card p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.prompt-steps {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.prompt-steps h2 {
+    font-size: 1.4rem;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.prompt-steps ol {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prompt-steps li {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    background: #f9fbff;
+}
+
+.prompt-steps h3 {
+    margin-bottom: 12px;
+    color: #2d3748;
+    font-size: 1.05rem;
+}
+
+.prompt-steps ul {
+    margin-left: 20px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.crtf-prompt {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px dashed #cbd5f5;
+    color: #2d3748;
+}
+
+.prompt-text span {
+    background: #ebf4ff;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.quiz-guide {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-guide h2 {
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.quiz-note {
+    color: #c05621;
+    background: #fffaf0;
+    border-left: 4px solid #dd6b20;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.quiz-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.quiz-steps article {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px;
+    background: #f7fafc;
+}
+
+.quiz-steps h3 {
+    margin-bottom: 10px;
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+.quiz-steps p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.quiz-extra {
+    margin-top: 20px;
+    border: 1px dashed #cbd5f5;
+    border-radius: 12px;
+    padding: 18px;
+    background: #edf2ff;
+}
+
+.quiz-extra h4 {
+    margin-bottom: 8px;
+    color: #1a365d;
+}
+
+.platform-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.platform-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.platform-card:active {
+    transform: translateY(-4px);
+}
+
+.card-image {
+    width: 100%;
+    height: 120px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.platform-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 12px 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #1a202c;
+}
+
+.card-content p {
+    font-size: 0.75rem;
+    color: #718096;
+    line-height: 1.4;
+}
+
+@media (max-width: 1400px) {
+    .platforms-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .platforms-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .crtf-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quiz-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .platforms-intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .course-info {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .course-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .course-dates p {
+        font-size: 0.9rem;
+    }
+
+    .course-link {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+
+    .platforms-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .prompt-anatomy {
+        padding: 22px;
+    }
+
+    .prompt-steps {
+        padding: 22px;
+    }
+
+    .crtf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-guide {
+        padding: 22px;
+    }
+
+    .card-image {
+        height: 100px;
+        padding: 12px;
+    }
+
+    .card-content {
+        padding: 10px 12px;
+    }
+
+    .card-content h2 {
+        font-size: 0.9rem;
+    }
+
+    .card-content p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .platforms-intro h2 {
+        font-size: 1rem;
+    }
+
+    .course-info {
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+
+    .course-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .course-dates p {
+        font-size: 0.85rem;
+    }
+
+    .course-link {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        align-self: stretch;
+        justify-content: center;
+    }
+
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .prompt-anatomy {
+        padding: 18px;
+    }
+
+    .prompt-steps {
+        padding: 18px;
+    }
+
+    .quiz-guide {
+        padding: 18px;
+    }
+
+    .card-image {
+        height: 90px;
+        padding: 10px;
+    }
+
+    .card-content {
+        padding: 8px 10px;
+    }
+
+    .card-content h2 {
+        font-size: 0.85rem;
+    }
+
+    .card-content p {
+        font-size: 0.65rem;
+    }
+}
+
